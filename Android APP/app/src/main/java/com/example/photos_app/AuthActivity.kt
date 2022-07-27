@@ -74,7 +74,7 @@ class AuthActivity : AppCompatActivity() {
             }
         }
         googleButton.setOnClickListener{
-            // Configuracion
+            // Configuracion GOOGLE
 
             val googleConf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
