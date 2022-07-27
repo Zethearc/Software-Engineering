@@ -68,5 +68,12 @@
                 android:text="Acceder" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/googleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Google" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
