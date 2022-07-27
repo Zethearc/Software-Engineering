@@ -1,20 +1,13 @@
 package com.example.photos_app
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AlertDialog
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_auth.*
 
 class AuthActivity : AppCompatActivity() {
-
-    private val GOOGLE_SIGN_IN = 100
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
@@ -22,25 +15,7 @@ class AuthActivity : AppCompatActivity() {
         //Setup
 
         setup()
-        session()
 
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        authLayout.visibility = View.VISIBLE
-    }
-
-    private fun session() {
-        val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE)
-        val email = prefs.getString("email", null)
-        val provider = prefs.getString("provider", null)
-
-        if(email != null && provider != null) {
-            authLayout.visibility = View.INVISIBLE
-            showHome(email, ProviderType.valueOf(provider))
-        }
     }
 
     private fun setup() {
@@ -72,16 +47,6 @@ class AuthActivity : AppCompatActivity() {
                         }
                     }
             }
-        }
-        googleButton.setOnClickListener{
-            // Configuracion
-
-            val googleConf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build()
-            val googleClient = GoogleSignIn.getClient(this, googleConf)
-
         }
     }
 
