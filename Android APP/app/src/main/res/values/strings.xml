@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Photos-APP</string>
+    <string name="prefs_file">com.example.photos_app.PREFERENCE_FILE_KEY</string>
 </resources>
