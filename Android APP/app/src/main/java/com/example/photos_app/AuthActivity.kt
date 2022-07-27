@@ -81,7 +81,7 @@ class AuthActivity : AppCompatActivity() {
                 .requestEmail()
                 .build()
             val googleClient = GoogleSignIn.getClient(this, googleConf)
-            
+
         }
     }
 
