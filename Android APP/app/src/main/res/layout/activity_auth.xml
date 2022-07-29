@@ -7,6 +7,7 @@
     tools:context=".AuthActivity">
 
     <LinearLayout
+        android:id="@+id/auth_"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -20,9 +21,9 @@
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="67dp"
             android:ems="10"
-            android:hint="Email"
+            android:hint="Google Email"
             android:inputType="textEmailAddress" />
 
         <Space
@@ -32,14 +33,14 @@
         <EditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="63dp"
             android:ems="10"
-            android:hint="Contraseña"
+            android:hint="Password"
             android:inputType="textPassword" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            android:layout_height="28dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,8 +52,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="Registrar" />
+                android:background="@color/black"
+                android:text="Register" />
 
             <Space
                 android:layout_width="0dp"
@@ -65,15 +66,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
-                android:text="Acceder" />
+                android:text="Login"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/googleButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="85dp"
             android:layout_weight="1"
-            android:text="Google" />
+            android:text="Login or register with Google" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
