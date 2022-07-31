@@ -4,85 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="20dp"
     tools:context=".AuthActivity">
 
-    <LinearLayout
-        android:id="@+id/auth_"
-        android:layout_width="0dp"
+    <ImageView
+        android:id="@+id/appLogotype"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/google" />
+
+    <TextView
+        android:id="@+id/descriptionBox"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_below="@+id/appLogotype"
+        android:layout_centerHorizontal="true"
+        android:text="Photos analysis with AI"
+        app:layout_constraintEnd_toEndOf="@+id/appLogotype"
+        app:layout_constraintStart_toStartOf="@+id/appLogotype"
+        app:layout_constraintTop_toBottomOf="@+id/appLogotype" />
 
-        <EditText
-            android:id="@+id/emailEditText"
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:ems="10"
-            android:hint="Google Email"
-            android:inputType="textEmailAddress" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
-
-        <EditText
-            android:id="@+id/passwordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="28dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/signUpButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/black"
-                android:text="Register" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="0.25" />
-
-            <Button
-                android:id="@+id/LogInButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="Login"
-                tools:ignore="TextContrastCheck" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/googleButton"
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:layout_weight="1"
-            android:text="Login or register with Google" />
-
-    </LinearLayout>
+    <Button
+        android:text="sign in with google"
+        android:id="@+id/googleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionBox"
+        app:layout_constraintStart_toStartOf="@+id/descriptionBox"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionBox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

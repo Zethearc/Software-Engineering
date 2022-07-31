@@ -1,6 +1,7 @@
 package com.example.photos_app
 
 import android.Manifest
+import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -35,10 +36,16 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
         Manifest.permission.READ_EXTERNAL_STORAGE
     )
+    private lateinit var binding: ActivityProfileBinding
+
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityProfileBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        firebaseAuth = FirebaseAuth.getInstance()
+
         list = ArrayList()
         recyclerView = findViewById(R.id.recycler)
         textView = findViewById(R.id.textView)
@@ -60,10 +67,26 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
                 requestPermissions(colum, 123)
             }
         }
-        val bundle: Bundle? = intent.extras
-        val email: String? = bundle?.getString("email")
-        val provider: String? = bundle?.getString("provider")
-        setup(email?: "", provider?: "")
+        checkUser()
+        binding.logOutButton.setOnCLickListener{
+            firebaseAuth.signOut()
+            checkUser()
+        }
+    }
+
+    private fun checkUser(){
+        val firebaseUser = firebaseAuth.currentUser
+        if (firebaseUser == null){
+            startActivity(Intent(this, AuthActivity::class.java))
+            finish()
+        }
+        else{
+            //user logged in
+            //get user info
+            val email = firebaseUser.email
+            //set email
+            binding.
+        }
     }
 
     private fun setup(email: String, provider: String) {
