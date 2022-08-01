@@ -17,11 +17,11 @@
 
     <ImageView
         android:id="@+id/imageView_del"
-        android:layout_width="33dp"
-        android:layout_height="32dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:src="@drawable/ic_baseline_remove_circle_24"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="378dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="362dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

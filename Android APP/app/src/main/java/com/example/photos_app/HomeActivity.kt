@@ -41,13 +41,14 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        list = ArrayList()
+        list = java.util.ArrayList()
         recyclerView = findViewById(R.id.recycler)
+        textView = findViewById(R.id.textView)
         button = findViewById(R.id.button)
         button_remove = findViewById(R.id.button_remove)
         adaptor = RecyclerAdaptor(list!!, applicationContext, this)
-        recyclerView?.layoutManager = GridLayoutManager(this@HomeActivity, 4)
-        recyclerView?.adapter = adaptor
+        recyclerView?.setLayoutManager(GridLayoutManager(this@HomeActivity, 4))
+        recyclerView?.setAdapter(adaptor)
         button?.setOnClickListener(this)
         button_remove?.setOnClickListener(this)
         if (ActivityCompat.checkSelfPermission(
@@ -57,7 +58,9 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
                 this, colum[1]
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            requestPermissions(colum, 123)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                requestPermissions(colum, 123)
+            }
         }
         val bundle: Bundle? = intent.extras
         val email: String? = bundle?.getString("email")
@@ -73,7 +76,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     private fun setup(email: String, provider: String) {
-        title = "Página Principal"
+        title = "Home Page"
         emailTextView.text = email
         providerTextView.text = provider
 
@@ -94,7 +97,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
             R.id.button_remove -> {
                 list!!.clear()
                 adaptor?.notifyDataSetChanged()
-                textView!!.text = "Image(" + list!!.size + ")"
+                textView!!.text = "                                         Image(" + list!!.size + ")"
             }
         }
     }
@@ -104,7 +107,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         intent.type = "image/*"
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
         intent.action = Intent.ACTION_GET_CONTENT
-        startActivityForResult(Intent.createChooser(intent, "Selcet Picture"), 123)
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), 123)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -121,16 +124,18 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
                     adaptor?.notifyDataSetChanged()
                     textView!!.text = "Image(" + list!!.size + ")"
                 }
-            if (data.data != null) {
+                adaptor!!.notifyDataSetChanged()
+                textView!!.text = "                                         Image(" + list!!.size + ")"
+            } else if (data.data != null) {
                 val imgurl = data.data!!.path
                 list!!.add(Uri.parse(imgurl))
-                }
             }
         }
     }
 
+
     override fun clicked(getSize: Int) {
-        textView!!.text = "Image(" + list!!.size + ")"
+        textView!!.text = "                                         Image(" + list!!.size + ")"
     }
     private fun showAlertImg() {
         val builder = AlertDialog.Builder(this)
