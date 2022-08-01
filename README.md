@@ -1,9 +1,11 @@
 # Software-Engineering
 Mobile application for emotion captioning using Google Photos.
-## Libraries needed to run the application code
 
 ## Overview  
 This project lays out an application for Android implement a system to detect emotions through image recognition from Google Photos repository. Finally, the program returns a description of what the person likes and have a general idea about his personality.  
+
+## Libraries needed to run the application code
+
 
   plugins {
       id 'com.android.application' version '7.2.1' apply false  
