@@ -1,5 +1,5 @@
 # Software-Engineering
-Mobile application for emotion analysis s in Google Photos
+Mobile application for emotion captioning in Google Photos
 ## Libraries needed to run the application code
 
   plugins {
@@ -11,7 +11,7 @@ Mobile application for emotion analysis s in Google Photos
 
 ## User Guide 
 
-1. Download the apk
+1. Download the APK
 2. For login:
     Create an email and a password or
     Register with google authentication
