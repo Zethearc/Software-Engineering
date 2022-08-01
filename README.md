@@ -44,13 +44,14 @@ The application will use the images to perform an analysis of the emotions displ
 Bugs can be reported in the issue tracker on our GitHub repo: https://github.com/Zethearc/Software-Engineering/issues4
 
 ## Authors of this project
-Astudillo Jaime jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)
-Cabezas Dario  dario.cabezas@yachaytech.edu.ec 
-De la Cruz Franklin franklin.de@yachaytech.edu.ec 
-Figueroa Saul. saul.figueroa@yachaytech.edu.ec
-Moncada Claudia. claudia.moncada@yachaytech.edu.ec
-Quelal Andres. andres.quelal@yachaytech.edu.ec
-Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec
-Zapatier Luis. luis.zapatier@yachaytech.edu.ec
+Astudillo Jaime jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)  
+
+Cabezas Dario  dario.cabezas@yachaytech.edu.ec  
+De la Cruz Franklin franklin.de@yachaytech.edu.ec   
+Figueroa Saul. saul.figueroa@yachaytech.edu.ec  
+Moncada Claudia. claudia.moncada@yachaytech.edu.ec  
+Quelal Andres. andres.quelal@yachaytech.edu.ec  
+Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec  
+Zapatier Luis. luis.zapatier@yachaytech.edu.ec  
 
 
