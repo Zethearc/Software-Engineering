@@ -9,7 +9,6 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-
 class RecyclerAdaptor(
     private val list: ArrayList<*>,
     private val context: Context,
