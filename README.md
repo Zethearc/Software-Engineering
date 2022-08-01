@@ -19,7 +19,7 @@ Mobile application for emotion captioning using Google Photos.
 3. Click on File -> New -> Import Project
      - **First Time using Android Studio:** Click Open an existing Android Studio project
 4. Search for the directory `Sotfware-Enginnering.git` and select it.
-5. If you get a Gradle Sync popup, click OK and wait for it to sync.
+5.  click OK and wait for it to sync.
 
 The application will use the images to perform an analysis of the emotions displayed and will generate a tag for the images and a category to which it belongs.
 1. **Inputs:** A batch of images.
