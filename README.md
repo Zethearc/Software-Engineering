@@ -10,8 +10,12 @@ Mobile application for emotion captioning using Google Photos.
       id implementation 'com.google.firebase:firebase-analytics:21.1.0'
       id implementation 'com.google.firebase:firebase-auth:21.0.6'
   }
-  
-## Description
+
+## Import Project on Android Studio
+1. Download the project from GitHub
+2. Open Android Studio
+3. Click on File -> New -> Import Project
+4. Find the project directory and click Ok.
 
 The application will use the images to perform an analysis of the emotions displayed and will generate a tag for the images and a category to which it belongs.
 1. **Inputs:** A batch of images.
