@@ -7,7 +7,7 @@ This project lays out an application for Android implement a system to detect em
 ## Libraries needed to run the application code
 
 
-  plugins {
+  plugins   {
       id 'com.android.application' version '7.2.1' apply false  
       id 'com.android.library' version '7.2.1' apply false  
       id 'org.jetbrains.kotlin.android' version '1.6.10' apply false  
