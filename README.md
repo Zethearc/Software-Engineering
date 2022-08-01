@@ -40,3 +40,9 @@ The application will use the images to perform an analysis of the emotions displ
 5. Select the photos from the Google Photos repository.
 6. Begin the sentiment analysis and display the results.
  
+ ## Troubleshooting
+Bugs can be reported in the issue tracker on our GitHub repo: https://github.com/Zethearc/Software-Engineering/issues4
+
+## Authors of this project
+- Jaime Astudillo - jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)
+
