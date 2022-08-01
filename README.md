@@ -2,13 +2,16 @@
 Mobile application for emotion captioning using Google Photos.
 ## Libraries needed to run the application code
 
+## Overview  
+This project lays out an application for Android implement a system to detect emotions through image recognition from Google Photos repository. Finally, the program returns a description of what the person likes and have a general idea about his personality.  
+
   plugins {
-      id 'com.android.application' version '7.2.1' apply false
-      id 'com.android.library' version '7.2.1' apply false
-      id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
-      id "com.google.gms.google-services" version "4.3.13" apply false
-      id implementation 'com.google.firebase:firebase-analytics:21.1.0'
-      id implementation 'com.google.firebase:firebase-auth:21.0.6'
+      id 'com.android.application' version '7.2.1' apply false  
+      id 'com.android.library' version '7.2.1' apply false  
+      id 'org.jetbrains.kotlin.android' version '1.6.10' apply false  
+      id "com.google.gms.google-services" version "4.3.13" apply false  
+      id implementation 'com.google.firebase:firebase-analytics:21.1.0'  
+      id implementation 'com.google.firebase:firebase-auth:21.0.6'  
   }
 ## Importing the Project on Android Studio
 1. Clone or download this repository:
