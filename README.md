@@ -45,13 +45,12 @@ Bugs can be reported in the issue tracker on our GitHub repo: https://github.com
 
 ## Authors of this project
 Astudillo Jaime jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)  
-
-Cabezas Dario  dario.cabezas@yachaytech.edu.ec  
-De la Cruz Franklin franklin.de@yachaytech.edu.ec   
-Figueroa Saul. saul.figueroa@yachaytech.edu.ec  
-Moncada Claudia. claudia.moncada@yachaytech.edu.ec  
-Quelal Andres. andres.quelal@yachaytech.edu.ec  
-Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec  
-Zapatier Luis. luis.zapatier@yachaytech.edu.ec  
+Cabezas Dario  dario.cabezas@yachaytech.edu.ec - [LinkedIn]   
+De la Cruz Franklin franklin.de@yachaytech.edu.ec - [LinkedIn]   
+Figueroa Saul. saul.figueroa@yachaytech.edu.ec - [LinkedIn]  
+Moncada Claudia. claudia.moncada@yachaytech.edu.ec - [LinkedIn]  
+Quelal Andres. andres.quelal@yachaytech.edu.ec - [LinkedIn]    
+Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec - [LinkedIn]  
+Zapatier Luis. luis.zapatier@yachaytech.edu.ec - [LinkedIn]  
 
 
