@@ -1,10 +1,10 @@
 package com.example.photos_app
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -19,14 +19,14 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 
 enum class ProviderType {
-    Email
+    Email,
+    Google
 }
 
 class HomeActivity : AppCompatActivity(), View.OnClickListener,
     RecyclerAdaptor.CountOfImagesWhenRemoved {
     var recyclerView: RecyclerView? = null
     var textView: TextView? = null
-    //var textView_msg: TextView? = null
     var button: Button? = null
     var button_remove: Button? = null
     var list: ArrayList<Uri>? = null
@@ -34,6 +34,8 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
     var colum = arrayOf(
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
         Manifest.permission.READ_EXTERNAL_STORAGE
+
+
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,6 +63,13 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         val email: String? = bundle?.getString("email")
         val provider: String? = bundle?.getString("provider")
         setup(email?: "", provider?: "")
+
+        //Guardado de datos
+
+        val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+        prefs.putString("Email", email)
+        prefs.putString("Provider", provider)
+        prefs.apply()
     }
 
     private fun setup(email: String, provider: String) {
@@ -69,6 +78,11 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         providerTextView.text = provider
 
         logOutButton.setOnClickListener {
+
+            val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+            prefs.clear()
+            prefs.apply()
+
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
         }

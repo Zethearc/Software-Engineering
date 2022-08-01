@@ -12,4 +12,5 @@
     <string name="upload">Upload</string>
     <string name="remove_all">Remove All</string>
     <string name="cerrar_sesi_n">Cerrar Sesión</string>
+    <string name="prefs_file">com.example.photos_app.PREFERENCE_FILE_KEY</string>>
 </resources>
