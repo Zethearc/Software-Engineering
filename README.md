@@ -32,10 +32,11 @@ The application will use the images to perform an analysis of the emotions displ
 ## User Guide 
 
 1. Download the APK.
-2. For login:
+2. Copy the apk to your phone.
+3. In your phone, search for the apk and install it. If your phone asks for confirmation or permission to install the apk, accept.
+4. For login:
     Create an email and a password or
     Register with google authentication.
-3. Select the photos from the Google Photos repository.
-4. Begin the sentiment analysis and display the results.
+5. Select the photos from the Google Photos repository.
+6. Begin the sentiment analysis and display the results.
  
-
