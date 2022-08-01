@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 
 enum class ProviderType {
-    BASIC
+    Email
 }
 
 class HomeActivity : AppCompatActivity(), View.OnClickListener,
@@ -41,7 +41,6 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         setContentView(R.layout.activity_home)
         list = ArrayList()
         recyclerView = findViewById(R.id.recycler)
-        textView = findViewById(R.id.textView)
         button = findViewById(R.id.button)
         button_remove = findViewById(R.id.button_remove)
         adaptor = RecyclerAdaptor(list!!, applicationContext, this)
@@ -56,9 +55,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
                 this, colum[1]
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requestPermissions(colum, 123)
-            }
+            requestPermissions(colum, 123)
         }
         val bundle: Bundle? = intent.extras
         val email: String? = bundle?.getString("email")
@@ -67,7 +64,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     private fun setup(email: String, provider: String) {
-        title = "Home"
+        title = "Página Principal"
         emailTextView.text = email
         providerTextView.text = provider
 

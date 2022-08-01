@@ -20,7 +20,7 @@ class AuthActivity : AppCompatActivity() {
 
     private fun setup() {
 
-        title = "Authentication"
+        title = "Login Page"
         signUpButton.setOnClickListener {
             if (emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty()) {
                 FirebaseAuth.getInstance()
@@ -29,7 +29,7 @@ class AuthActivity : AppCompatActivity() {
                         passwordEditText.text.toString()
                     ).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                            showHome(it.result?.user?.email ?: "", ProviderType.Email)
                         } else {
                             showAlert()
                         }
@@ -43,7 +43,7 @@ class AuthActivity : AppCompatActivity() {
                     .signInWithEmailAndPassword(emailEditText.text.toString(),
                         passwordEditText.text.toString()).addOnCompleteListener{
                         if (it.isSuccessful){
-                            showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                            showHome(it.result?.user?.email ?: "", ProviderType.Email)
                         } else {
                             showAlert()
                         }

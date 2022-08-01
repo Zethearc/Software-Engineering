@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3E68BD"
     tools:context=".AuthActivity">
 
     <LinearLayout
@@ -17,13 +18,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/emailEditText"
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/loginText2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/bienvenido"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@mipmap/user_login" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:gravity="center"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:autofillHints="" />
 
         <Space
             android:layout_width="match_parent"
@@ -31,49 +68,65 @@
 
         <EditText
             android:id="@+id/passwordEditText"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:ems="10"
-            android:hint="Contraseña"
-            android:inputType="textPassword" />
+            android:gravity="center"
+            android:hint="@string/contrase_a"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:autofillHints="" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            android:layout_height="50dp" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/LogInButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#2D4C8A"
+            android:gravity="center"
+            android:text="@string/acceder"
+            app:icon="@drawable/common_full_open_on_phone"
+            app:iconPadding="-16dp"
+            app:iconSize="25dp" />
+
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="10dp" />
 
-            <Button
-                android:id="@+id/signUpButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="Registrar" />
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#2D4C8A"
+            android:gravity="center"
+            android:isScrollContainer="false"
+            android:text="@string/registrar"
+            app:icon="@android:drawable/sym_action_email"
+            app:iconPadding="-24dp" />
 
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="0.25" />
-
-            <Button
-                android:id="@+id/LogInButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="Acceder" />
-
-        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <Button
             android:id="@+id/googleButton"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Google" />
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:backgroundTint="#2D4C8A"
+            android:text="@string/google"
+            app:icon="@drawable/googleg_standard_color_18"
+            app:iconPadding="-12dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
