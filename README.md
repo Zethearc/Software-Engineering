@@ -17,3 +17,12 @@ Mobile application for emotion captioning using Google Photos.
 2. For login:
     Create an email and a password or
     Register with google authentication
+    
+<em> Description </em> 
+
+The application will use the images to perform an analysis of the emotions displayed and will generate a tag for the images and a category to which it belongs.
+1. Inputs: A batch of images.
+2. Source: Google Photos or user’s phone gallery.
+3. Output: A category and tag for each image. 
+4. Destination: Main application interface.
+
