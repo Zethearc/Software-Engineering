@@ -1,4 +1,4 @@
-# Sentiment Analysis of google photos images
+# Sentiment Analysis with google photos images
 
 ## Overview  
 This project lays out an application for Android implement a system to detect emotions through image recognition from Google Photos repository. Finally, the program returns the images and the scores that got evaluated.
