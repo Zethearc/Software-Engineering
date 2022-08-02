@@ -1,9 +1,24 @@
-# Software-Engineering
+# Sentiment Analysis of google photos images
 
 ## Overview  
-This project lays out an application for Android implement a system to detect emotions through image recognition from Google Photos repository. Finally, the program returns a description of what the person likes and have a general idea about his personality.  
+This project lays out an application for Android implement a system to detect emotions through image recognition from Google Photos repository. Finally, the program returns the images and the scores that got evaluated.
 
-## Libraries needed to run the application code
+## User Guide 
+
+1. Go to the **Android APK** folder and download the APK for android smartphones.
+2. Copy the APK to your phone.
+3. In your phone, search for the APK and install it. If your phone asks for confirmation or permission to install the apk, accept.
+4. For login:
+    Register with a google account to aunthenticate, if you do not have a google account, you must create one.
+5. Select the photos from the Google Photos repository.
+6. Begin the sentiment analysis and display the results.
+7. If you want to delete your personal information, the app gives the option to do it.
+ 
+ ## Troubleshooting
+Bugs can be reported in the issue tracker on our GitHub repo: https://github.com/Zethearc/Software-Engineering/issues4
+
+
+## For Developers - Libraries needed to run the application code
 
 
   plugins   {   
@@ -32,20 +47,6 @@ The application will use the images to perform an analysis of the emotions displ
 4. **Destination:** Main application interface.
 5. **Requirements:** An initial batch of 8 photos. Photographs containing different elements on scene.
 
-
-## User Guide 
-
-1. Download the APK.
-2. Copy the apk to your phone.
-3. In your phone, search for the apk and install it. If your phone asks for confirmation or permission to install the apk, accept.
-4. For login:
-    Create an email and a password or
-    Register with google authentication.
-5. Select the photos from the Google Photos repository.
-6. Begin the sentiment analysis and display the results.
- 
- ## Troubleshooting
-Bugs can be reported in the issue tracker on our GitHub repo: https://github.com/Zethearc/Software-Engineering/issues4
 
 ## Authors of this project
 Astudillo Jaime jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)  
