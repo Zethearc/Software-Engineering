@@ -35,8 +35,6 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
     var colum = arrayOf(
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
         Manifest.permission.READ_EXTERNAL_STORAGE
-
-
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,20 +57,19 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
                 this, colum[1]
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requestPermissions(colum, 123)
-            }
+            requestPermissions(colum, 123)
         }
-        val bundle: Bundle? = intent.extras
-        val email: String? = bundle?.getString("email")
-        val provider: String? = bundle?.getString("provider")
-        setup(email?: "", provider?: "")
 
-        //Guardado de datos
+        //Setup
+        val bundle = intent.extras
+        val email = bundle?.getString("email")
+        val provider = bundle?.getString("provider")
+        setup(email ?: "", provider ?: "")
 
+        //Save Data
         val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
-        prefs.putString("Email", email)
-        prefs.putString("Provider", provider)
+        prefs.putString("email", email)
+        prefs.putString("provider", provider)
         prefs.apply()
     }
 
@@ -83,6 +80,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
 
         logOutButton.setOnClickListener {
 
+            // Borrado de datos
             val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
             prefs.clear()
             prefs.apply()
