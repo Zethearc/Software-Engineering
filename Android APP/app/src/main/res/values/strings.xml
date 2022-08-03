@@ -13,4 +13,8 @@
     <string name="remove_all">Remove All</string>
     <string name="cerrar_sesi_n">Cerrar Sesión</string>
     <string name="prefs_file">com.example.photos_app.PREFERENCE_FILE_KEY</string>>
+    <string name="tfe_tc_edit_text_hint" translatable="false">Input Text.</string>
+    <string name="tfe_tc_button_ok" translatable="false">Predict</string>
+
+
 </resources>
