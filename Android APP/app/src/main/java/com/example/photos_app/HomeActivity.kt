@@ -1,7 +1,7 @@
 package com.example.photos_app
 
 import android.Manifest
-import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -20,14 +20,14 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 
 enum class ProviderType {
-    BASIC
+    Email,
+    Google
 }
 
 class HomeActivity : AppCompatActivity(), View.OnClickListener,
     RecyclerAdaptor.CountOfImagesWhenRemoved {
     var recyclerView: RecyclerView? = null
     var textView: TextView? = null
-    //var textView_msg: TextView? = null
     var button: Button? = null
     var button_remove: Button? = null
     var list: ArrayList<Uri>? = null
@@ -35,25 +35,21 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
     var colum = arrayOf(
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
         Manifest.permission.READ_EXTERNAL_STORAGE
-    )
-    private lateinit var binding: ActivityProfileBinding
 
-    private lateinit var firebaseAuth: FirebaseAuth
+
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityProfileBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        firebaseAuth = FirebaseAuth.getInstance()
-
-        list = ArrayList()
+        setContentView(R.layout.activity_home)
+        list = java.util.ArrayList()
         recyclerView = findViewById(R.id.recycler)
         textView = findViewById(R.id.textView)
         button = findViewById(R.id.button)
         button_remove = findViewById(R.id.button_remove)
         adaptor = RecyclerAdaptor(list!!, applicationContext, this)
-        recyclerView?.layoutManager = GridLayoutManager(this@HomeActivity, 4)
-        recyclerView?.adapter = adaptor
+        recyclerView?.setLayoutManager(GridLayoutManager(this@HomeActivity, 4))
+        recyclerView?.setAdapter(adaptor)
         button?.setOnClickListener(this)
         button_remove?.setOnClickListener(this)
         if (ActivityCompat.checkSelfPermission(
@@ -67,34 +63,30 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
                 requestPermissions(colum, 123)
             }
         }
-        checkUser()
-        binding.logOutButton.setOnCLickListener{
-            firebaseAuth.signOut()
-            checkUser()
-        }
-    }
+        val bundle: Bundle? = intent.extras
+        val email: String? = bundle?.getString("email")
+        val provider: String? = bundle?.getString("provider")
+        setup(email?: "", provider?: "")
 
-    private fun checkUser(){
-        val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser == null){
-            startActivity(Intent(this, AuthActivity::class.java))
-            finish()
-        }
-        else{
-            //user logged in
-            //get user info
-            val email = firebaseUser.email
-            //set email
-            binding.
-        }
+        //Guardado de datos
+
+        val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+        prefs.putString("Email", email)
+        prefs.putString("Provider", provider)
+        prefs.apply()
     }
 
     private fun setup(email: String, provider: String) {
-        title = "Home"
+        title = "Home Page"
         emailTextView.text = email
         providerTextView.text = provider
 
         logOutButton.setOnClickListener {
+
+            val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+            prefs.clear()
+            prefs.apply()
+
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
         }
@@ -106,7 +98,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
             R.id.button_remove -> {
                 list!!.clear()
                 adaptor?.notifyDataSetChanged()
-                textView!!.text = "Image(" + list!!.size + ")"
+                textView!!.text = "                                         Image(" + list!!.size + ")"
             }
         }
     }
@@ -116,7 +108,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         intent.type = "image/*"
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
         intent.action = Intent.ACTION_GET_CONTENT
-        startActivityForResult(Intent.createChooser(intent, "Selcet Picture"), 123)
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), 123)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -133,16 +125,18 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
                     adaptor?.notifyDataSetChanged()
                     textView!!.text = "Image(" + list!!.size + ")"
                 }
-            if (data.data != null) {
+                adaptor!!.notifyDataSetChanged()
+                textView!!.text = "                                         Image(" + list!!.size + ")"
+            } else if (data.data != null) {
                 val imgurl = data.data!!.path
                 list!!.add(Uri.parse(imgurl))
-                }
             }
         }
     }
 
+
     override fun clicked(getSize: Int) {
-        textView!!.text = "Image(" + list!!.size + ")"
+        textView!!.text = "                                         Image(" + list!!.size + ")"
     }
     private fun showAlertImg() {
         val builder = AlertDialog.Builder(this)
