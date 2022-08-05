@@ -25,7 +25,7 @@
         android:id="@+id/input_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hind="@strings/tfe_tc_edit_text_hint"
+
         android:inputType="textNoSuggestions"
         android:minHeight="48dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/predict_button"
@@ -41,12 +41,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
