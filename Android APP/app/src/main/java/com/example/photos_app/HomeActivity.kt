@@ -74,6 +74,15 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         prefs.putString("Email", email)
         prefs.putString("Provider", provider)
         prefs.apply()
+
+        //Cambiar a la interfaz del sentiment analysis
+
+        val btn: Button = findViewById(R.id.button_sentiment)
+        btn.setOnClickListener {
+            val intent: Intent = Intent(this, SentimentModel::class.java)
+            startActivity(intent)
+            }
+
     }
 
     private fun setup(email: String, provider: String) {
@@ -146,4 +155,19 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
+
+
+    //Plotear la parte del sentiment analysis
+    //override fun onCreate(savedInstanceState: Bundle?) {
+        //super.onCreate(savedInstanceState)
+        //setContentView(R.layout.sentiment_model)
+
+        //val btn: Button = findViewById(R.id.button_sentiment)
+        //btn.setOnClickListener {
+            //val intent: Intent = Intent(this, SentimentModel::class.java)
+            //startActivity(intent)
+        //}
+    //}
+
+
 }

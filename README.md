@@ -59,4 +59,3 @@ Quelal Andres. andres.quelal@yachaytech.edu.ec - [LinkedIn]
 Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec - [LinkedIn]  
 Zapatier Luis. luis.zapatier@yachaytech.edu.ec - [LinkedIn]  
 
-
