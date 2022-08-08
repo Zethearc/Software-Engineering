@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
     tools:context=".SentimentModel">
 
     <ScrollView
@@ -29,7 +30,7 @@
 
         android:inputType="textNoSuggestions"
         android:minHeight="48dp"
-        android:text="Input Text"
+        android:hint="@string/tfe_tc_edit_text_hint"
         app:layout_constraintBaseline_toBaselineOf="@+id/predict_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/predict_button"

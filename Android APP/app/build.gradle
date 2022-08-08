@@ -67,7 +67,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-model-interpreter:22.0.4'
 
     // TODO 4: Add TFLite Task API (Text) dependency
-    implementation 'org.tensorflow:tensorflow-lite-task-text:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-task-text:0.1.0' //No subir de version
 
 }
 
