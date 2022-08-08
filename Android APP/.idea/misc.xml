@@ -3,20 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Desktop/Yachay Saul/9no Semestre Carrera/Ingenieria de Software/Projecto/Design and Implementation/Bugs solved - Last Implementation/Software-Engineering/Android APP/app/src/main/res/layout/activity_home.xml" value="0.18" />
-        <entry key="..\:/Desktop/Yachay Saul/9no Semestre Carrera/Ingenieria de Software/Projecto/Design and Implementation/Bugs solved - Last Implementation/Software-Engineering/Android APP/app/src/main/res/layout/custom_item_layout.xml" value="0.1" />
-        <entry key="..\:/Users/Saul/Downloads/Software-Engineering-main/Android APP/app/src/main/res/layout/activity_home.xml" value="0.18" />
-        <entry key="..\:/Users/Saul/Downloads/Software-Engineering-main/Android APP/app/src/main/res/layout/custom_item_layout.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/Documents/Repositorios/Software/PhotosAPP/app/src/main/res/layout/activity_home.xml" value="0.3625" />
-        <entry key="..\:/Users/User/Documents/Repositorios/Software/PhotosAPP/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/User/Documents/Repositorios/Software/Software-Engineering/Android APP/app/src/main/res/drawable/splashscreen.xml" value="0.1495" />
-        <entry key="..\:/Users/User/Documents/Repositorios/Software/Software-Engineering/Android APP/app/src/main/res/layout/activity_auth.xml" value="0.29916897506925205" />
-        <entry key="..\:/Users/User/Documents/Repositorios/Software/Software-Engineering/Android APP/app/src/main/res/layout/activity_home.xml" value="0.33" />
-        <entry key="..\:/Users/User/Documents/Repositorios/Software/Software-Engineering/Android APP/app/src/main/res/layout/custom_item_layout.xml" value="0.3625" />
+        <entry key="..\:/Users/Steven.STEVEN.000/Downloads/Ingeniería de Software/android-upload-file-to-server/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
