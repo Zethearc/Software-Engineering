@@ -126,7 +126,9 @@
             android:insetLeft="120dp"
             android:insetTop="10dp"
             android:insetRight="120dp"
-            android:text="Sentiment App" />
+            android:text="Prediction"
+            android:backgroundTint="#2D4C8A"
+            />
 
     </LinearLayout>
 

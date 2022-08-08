@@ -55,18 +55,28 @@ class SentimentModel : AppCompatActivity() {
             // TODO 7: Run sentiment analysis on the input text
             val results = textClassifier.classify(text)
 
+            // Create an array to predict sentiment results
+            //val names = arrayOf("Hello world","I hate you","I love you","You look awesome","You are beautiful")
+
             // TODO 8: Convert the result to a human-readable text
             var textToShow = "Input: $text\nOutput:\n"
-            //float array[] = new float[3];
+            //Arreglo para almacenar el resultado
+            //var texts = arrayOf<String>()
+            //Inicion del bucle para mostrar los resultados
             for (i in results.indices) {
                 val result = results[i]
                 textToShow += String.format("    %s: %s\n", result.label, result.score)
-                //array[i] = result.getScore();
+                //texts[i] = String.format("    %s", result.score)
             }
+            //for(i in 0..2){
+            //    val resultados = String.format("     %s\n", texts[i])
+            //    showResult(resultados)
+            //}
             textToShow += "-----------\n"
 
             // Show classification result on screen
             showResult(textToShow)
+            //showResult(texts.toString())
         }
     }
 
