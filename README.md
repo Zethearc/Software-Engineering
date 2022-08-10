@@ -68,6 +68,7 @@ The first step in the App is to get login with your own credentials or by the Go
 
 ### Select photos from Google Photos
 The second step for the user is to upload their photos from Google Photos. For this the user must select the number of photos of his preference from Google Photos and upload them to the App. 
+![5](5.png)
 
 ### Sentiment Analysis
 The third step for the user after registration is to begin sentiment analysis. Then, the sentiment analysis will start with the uploaded data. The final result is the display of a text string of the analysis and graphs corresponding to the result.
