@@ -67,7 +67,8 @@ The first step in the App is to get login with your own credentials or by the Go
 ![3](3.png)
 
 ### Select photos from Google Photos
-The second step for the user is to upload their photos from Google Photos. For this the user must select the number of photos of his preference from Google Photos and upload them to the App. 
+The second step for the user is to upload their photos from Google Photos. For this the user must select the number of photos of his preference from Google Photos and upload them to the App. Remember to select the most relevant pictures about the user in order to obtain the best final analysis.
+
 ![5](5.png)
 
 ### Sentiment Analysis
