@@ -1,50 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#3E68BD"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:fillViewport="true"
+    android:orientation="vertical"
     tools:context=".SentimentModel">
 
-    <ScrollView
-        android:id="@+id/scroll_view"
+    <TextView
+        android:id="@+id/idTVHead"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBaseline_toTopOf="@+id/input_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="Sentiment Analysis stats"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--Ui component for our pie chart-->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/idTVHead"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pieChart"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
 
         <TextView
-            android:id="@+id/result_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:drawableTint="@color/red"
+            android:gravity="center"
+            android:padding="4dp"
+            android:background="#2D4C8A"
+            android:text="Negative"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:drawableLeftCompat="@drawable/ic_circle"
+            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
 
-    </ScrollView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#2D4C8A"
+            android:drawableLeft="@drawable/ic_circle"
+            android:drawableTint="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Neutral"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
 
-    <EditText
-        android:id="@+id/input_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_circle"
+            android:drawableTint="@color/teal_700"
+            android:gravity="center"
+            android:padding="4dp"
+            android:background="#2D4C8A"
+            android:text="Positive"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+    </LinearLayout>
 
-        android:inputType="textNoSuggestions"
-        android:minHeight="48dp"
-        android:hint="@string/tfe_tc_edit_text_hint"
-        app:layout_constraintBaseline_toBaselineOf="@+id/predict_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/predict_button"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/predict_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Predict"
-        android:backgroundTint="#2D4C8A"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
 
 
