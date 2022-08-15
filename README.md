@@ -50,7 +50,7 @@ The application will use the images to perform an analysis of the emotions displ
 
 ## Authors of this project
 Astudillo Jaime jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)  
-Cabezas Dario  dario.cabezas@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/darioscabezas/)
+Cabezas Dario  dario.cabezas@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/darioscabezas/)  
 Camacho Jean   jean.camacho@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jean-camacho-126126212)  
 De la Cruz Franklin franklin.de@yachaytech.edu.ec - [LinkedIn]   
 Figueroa Saul. saul.figueroa@yachaytech.edu.ec - [LinkedIn]  
