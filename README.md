@@ -53,7 +53,7 @@ Android Studio will warn you if you try to start the project on a device that ha
 2. Using the console access the caption model folder.
 3. Execute the command `"pip install requirements.txt"`.
 4. Once all the requirements are installed, run the server with the command `"python app.py"`.
-5. Wait for it to run. There will be IP addresses of the server, copy that one (any of those 2) in the app that has as name `"MyAPI"` where it says base url.
+5. Wait for it to run. There will be IP addresses of the server, copy that one (any of those 2) in the app that has as name `"MyAPI"` where it says base URL.
 6. Compile and install the application again, and the caption model should work.
 
 
@@ -96,8 +96,7 @@ Cabezas Dario  dario.cabezas@yachaytech.edu.ec - [LinkedIn](https://www.linkedin
 Camacho Jean   jean.camacho@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jean-camacho-126126212)  
 De la Cruz Franklin franklin.de@yachaytech.edu.ec - [LinkedIn]   
 Figueroa Saul. saul.figueroa@yachaytech.edu.ec - [LinkedIn]  
-Moncada Claudia. claudia.moncada@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/claudia-maria-moncada-da-silva-999a63248/)
-
+Moncada Claudia. claudia.moncada@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/claudia-maria-moncada-da-silva-999a63248/)                        
 Quelal Andres. andres.quelal@yachaytech.edu.ec - [LinkedIn]    
 Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec - [LinkedIn]  
 Zapatier Luis. luis.zapatier@yachaytech.edu.ec - [LinkedIn]  
