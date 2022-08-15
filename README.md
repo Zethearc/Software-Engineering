@@ -47,6 +47,28 @@ The application will use the images to perform an analysis of the emotions displ
 4. **Destination:** Main application interface.
 5. **Requirements:** An initial batch of 8 photos. Photographs containing different elements on scene.
 
+## User Guide for the APK
+Android Studio configures new projects to deploy to Android Emulator or a connected device with a few clicks. Once the app is installed, you can use Apply Changes to deploy certain code and resource changes without building a new APK. To build and run the app, follow these steps:
+1. In the toolbar, select the app from the run settings drop-down menu.
+2. In the target device drop-down menu, select the device on which you want to run the app. 
+If you do not have any device configured, you must connect a device via USB or create an AVD to use Android Emulator.
+3. Click on Run.
+
+### How to connect to your device via USB
+When everything is ready and the device is connected via USB, click Run in Android Studio to build and run the app on the device.
+You can also use adb to execute commands as follows:
+- Verify that the device is connected by executing the command *adb devices* from the directory *android_sdk/platform-tools/*. If it is connected, you will see the device in the list.
+- Run any adb command with the -d flag to target the device.
+Android Studio will warn you if you try to start the project on a device that has an associated error or warning. Iconography and stylistic changes differentiate between errors (device selections that result in a corrupted configuration) and warnings (device selections that may result in unexpected behavior, but can still be executed).
+
+## User Guide for the Captioning Model 
+1. Unzip the file **“captionmodel.rar”**.
+2. Using the console access the caption model folder.
+3. Execute the command **pip install requirements.txt"**.
+4. Once all the requirements are installed, run the server with the command **"python app.py"**.
+5. Wait for it to run. There will be IP addresses of the server, copy that one (any of those 2) in the app that has as name **"MyAPI"** where it says base url.
+6. Compile and install the application again, and the caption model should work.
+
 
 ## Authors of this project
 Astudillo Jaime jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)  
