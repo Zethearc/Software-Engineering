@@ -97,6 +97,7 @@ Camacho Jean   jean.camacho@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.
 De la Cruz Franklin franklin.de@yachaytech.edu.ec - [LinkedIn]   
 Figueroa Saul. saul.figueroa@yachaytech.edu.ec - [LinkedIn]  
 Moncada Claudia. claudia.moncada@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/claudia-maria-moncada-da-silva-999a63248/)
+
 Quelal Andres. andres.quelal@yachaytech.edu.ec - [LinkedIn]    
 Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec - [LinkedIn]  
 Zapatier Luis. luis.zapatier@yachaytech.edu.ec - [LinkedIn]  
