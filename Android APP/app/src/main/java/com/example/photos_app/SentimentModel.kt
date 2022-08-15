@@ -26,6 +26,7 @@ class SentimentModel : AppCompatActivity() {
     private lateinit var inputImageCaptioning: EditText
     private lateinit var executorService: ExecutorService
     private lateinit var scrollView: ScrollView
+
     //piechart
     lateinit var pieChart: PieChart
 
@@ -37,7 +38,13 @@ class SentimentModel : AppCompatActivity() {
         Log.v(TAG, "onCreate")
         executorService = Executors.newSingleThreadExecutor()
         // TODO JEAN: Changed the var 'inputEditText' to "inputImageCaptioning" because will collect the captioning from the Franklin model, by the moment has an test array
-        val inputImageCaptioning = arrayOf("Hello world","I hate you","I love you","You look awesome","You are beautiful")
+        val inputImageCaptioning = arrayOf(
+            "Hello world",
+            "I hate you",
+            "I love you",
+            "You look awesome",
+            "You are beautiful"
+        )
 
         classify(inputImageCaptioning.toString())
         // JEAN: need to pass that classify to an new array that append
@@ -117,57 +124,4 @@ class SentimentModel : AppCompatActivity() {
                     .show()
             }
     }
-
-    // TODO #Piechart section#
-    // on below line we are initializing our
-    // variable with their ids.
-    pieChart = findViewById(R.id.pieChart)
-
-    // on below line we are setting user percent value,
-    // setting description as enabled and offset for pie chart
-    pieChart.setUsePercentValues(true)
-    pieChart.getDescription().setEnabled(false)
-    pieChart.setExtraOffsets(5f, 10f, 5f, 5f)
-
-    // on below line we are setting drag for our pie chart
-    pieChart.setDragDecelerationFrictionCoef(0.95f)
-
-    // on below line we are setting hole
-    // and hole color for pie chart
-    pieChart.setDrawHoleEnabled(true)
-    pieChart.setHoleColor(Color.WHITE)
-
-    // on below line we are setting circle color and alpha
-    pieChart.setTransparentCircleColor(Color.WHITE)
-    pieChart.setTransparentCircleAlpha(110)
-
-    // on  below line we are setting hole radius
-    pieChart.setHoleRadius(58f)
-    pieChart.setTransparentCircleRadius(61f)
-
-    // on below line we are setting center text
-    pieChart.setDrawCenterText(true)
-
-    // on below line we are setting
-    // rotation for our pie chart
-    pieChart.setRotationAngle(0f)
-
-    // enable rotation of the pieChart by touch
-    pieChart.setRotationEnabled(true)
-    pieChart.setHighlightPerTapEnabled(true)
-
-    // on below line we are setting animation for our pie chart
-    pieChart.animateY(1400, Easing.EaseInOutQuad)
-
-    // on below line we are disabling our legend for pie chart
-    pieChart.legend.isEnabled = false
-    pieChart.setEntryLabelColor(Color.WHITE)
-    pieChart.setEntryLabelTextSize(12f)
-
-    // on below line we are creating array list and
-    // adding data to it to display in pie chart
-
-    entries.add(negativeValues)
-    entries.add(neutralValues)
-    entries.add(positiveValues)
 }
