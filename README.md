@@ -5,7 +5,7 @@ This project lays out an application for Android implement a system to detect em
 
 ## User Guide 
 
-1. Go to the **Android APK** folder and download the APK for android smartphones.
+1. Go to the `Android APK` folder and download the APK for android smartphones.
 2. Copy the APK to your phone.
 3. In your phone, search for the APK and install it. If your phone asks for confirmation or permission to install the apk, accept.
 4. For login:
@@ -19,7 +19,6 @@ Bugs can be reported in the issue tracker on our GitHub repo: https://github.com
 
 
 ## For Developers - Libraries needed to run the application code
-
 
   plugins   {   
       id 'com.android.application' version '7.2.1' apply false  
@@ -57,29 +56,18 @@ If you do not have any device configured, you must connect a device via USB or c
 ### How to connect to your device via USB
 When everything is ready and the device is connected via USB, click Run in Android Studio to build and run the app on the device.
 You can also use adb to execute commands as follows:
-- Verify that the device is connected by executing the command *adb devices* from the directory *android_sdk/platform-tools/*. If it is connected, you will see the device in the list.
-- Run any adb command with the -d flag to target the device.
+- Verify that the device is connected by executing the command `adb devices` from the directory `android_sdk/platform-tools/`. If it is connected, you will see the device in the list.
+- Run any adb command with the `-d` flag to target the device.
 Android Studio will warn you if you try to start the project on a device that has an associated error or warning. Iconography and stylistic changes differentiate between errors (device selections that result in a corrupted configuration) and warnings (device selections that may result in unexpected behavior, but can still be executed).
 
 ## User Guide for the Captioning Model 
-1. Unzip the file **“captionmodel.rar”**.
+1. Unzip the file `“captionmodel.rar”`.
 2. Using the console access the caption model folder.
-3. Execute the command **pip install requirements.txt"**.
-4. Once all the requirements are installed, run the server with the command **"python app.py"**.
-5. Wait for it to run. There will be IP addresses of the server, copy that one (any of those 2) in the app that has as name **"MyAPI"** where it says base url.
+3. Execute the command `"pip install requirements.txt"`.
+4. Once all the requirements are installed, run the server with the command `"python app.py"`.
+5. Wait for it to run. There will be IP addresses of the server, copy that one (any of those 2) in the app that has as name `"MyAPI"` where it says base url.
 6. Compile and install the application again, and the caption model should work.
 
-
-## Authors of this project
-Astudillo Jaime jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)  
-Cabezas Dario  dario.cabezas@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/darioscabezas/)  
-Camacho Jean   jean.camacho@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jean-camacho-126126212)  
-De la Cruz Franklin franklin.de@yachaytech.edu.ec - [LinkedIn]   
-Figueroa Saul. saul.figueroa@yachaytech.edu.ec - [LinkedIn]  
-Moncada Claudia. claudia.moncada@yachaytech.edu.ec - [LinkedIn]  
-Quelal Andres. andres.quelal@yachaytech.edu.ec - [LinkedIn]    
-Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec - [LinkedIn]  
-Zapatier Luis. luis.zapatier@yachaytech.edu.ec - [LinkedIn]  
 
 ## Demo of the App (Screenshots)
 ### Login
@@ -98,3 +86,15 @@ The third step for the user after registration is to begin sentiment analysis. T
 
 ![2](2.jpg)
 ![4](4.png)
+
+
+## Authors of this project
+Astudillo Jaime jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)  
+Cabezas Dario  dario.cabezas@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/darioscabezas/)  
+Camacho Jean   jean.camacho@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jean-camacho-126126212)  
+De la Cruz Franklin franklin.de@yachaytech.edu.ec - [LinkedIn]   
+Figueroa Saul. saul.figueroa@yachaytech.edu.ec - [LinkedIn]  
+Moncada Claudia. claudia.moncada@yachaytech.edu.ec - [LinkedIn]  
+Quelal Andres. andres.quelal@yachaytech.edu.ec - [LinkedIn]    
+Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec - [LinkedIn]  
+Zapatier Luis. luis.zapatier@yachaytech.edu.ec - [LinkedIn]  
