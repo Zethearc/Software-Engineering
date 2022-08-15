@@ -1,10 +1,9 @@
-# Sentiment Analysis with google photos images
+# Sentiment Analysis with Google Photos Images
 
 ## Overview  
 This project lays out an application for Android implement a system to detect emotions through image recognition from Google Photos repository. Finally, the program returns the images and the scores that got evaluated.
 
 ## User Guide 
-
 1. Go to the `Android APK` folder and download the APK for android smartphones.
 2. Copy the APK to your phone.
 3. In your phone, search for the APK and install it. If your phone asks for confirmation or permission to install the apk, accept.
@@ -13,21 +12,7 @@ This project lays out an application for Android implement a system to detect em
 5. Select the photos from the Google Photos repository.
 6. Begin the sentiment analysis and display the results.
 7. If you want to delete your personal information, the app gives the option to do it.
- 
- ## Troubleshooting
-Bugs can be reported in the issue tracker on our GitHub repo: https://github.com/Zethearc/Software-Engineering/issues4
 
-
-## For Developers - Libraries needed to run the application code
-
-  plugins   {   
-      id 'com.android.application' version '7.2.1' apply false  
-      id 'com.android.library' version '7.2.1' apply false  
-      id 'org.jetbrains.kotlin.android' version '1.6.10' apply false  
-      id "com.google.gms.google-services" version "4.3.13" apply false  
-      id implementation 'com.google.firebase:firebase-analytics:21.1.0'  
-      id implementation 'com.google.firebase:firebase-auth:21.0.6'  
-  }
 ## Importing the Project on Android Studio
 1. Clone or download this repository:
      ```
@@ -48,9 +33,12 @@ The application will use the images to perform an analysis of the emotions displ
 
 ## User Guide for the APK
 Android Studio configures new projects to deploy to Android Emulator or a connected device with a few clicks. Once the app is installed, you can use Apply Changes to deploy certain code and resource changes without building a new APK. To build and run the app, follow these steps:
-1. In the toolbar, select the app from the run settings drop-down menu.
-2. In the target device drop-down menu, select the device on which you want to run the app. 
+1. In the toolbar, select the app from the run settings `drop-down menu`.
+2. In the target device `drop-down menu`, select the device on which you want to run the app. 
 If you do not have any device configured, you must connect a device via USB or create an AVD to use Android Emulator.
+
+![1.2](1.2.png)
+
 3. Click on Run.
 
 ### How to connect to your device via USB
@@ -87,6 +75,20 @@ The third step for the user after registration is to begin sentiment analysis. T
 ![2](2.jpg)
 ![4](4.png)
 
+
+## For Developers - Libraries needed to run the application code
+
+  plugins   {   
+      id 'com.android.application' version '7.2.1' apply false  
+      id 'com.android.library' version '7.2.1' apply false  
+      id 'org.jetbrains.kotlin.android' version '1.6.10' apply false  
+      id "com.google.gms.google-services" version "4.3.13" apply false  
+      id implementation 'com.google.firebase:firebase-analytics:21.1.0'  
+      id implementation 'com.google.firebase:firebase-auth:21.0.6'  
+  }
+  
+ ## Troubleshooting
+Bugs can be reported in the issue tracker on our GitHub repo: https://github.com/Zethearc/Software-Engineering/issues4
 
 ## Authors of this project
 Astudillo Jaime jaime.astudillo@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jaime-astudillo-664754228/)  
