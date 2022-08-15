@@ -69,5 +69,11 @@ dependencies {
     // TODO 4: Add TFLite Task API (Text) dependency
     implementation 'org.tensorflow:tensorflow-lite-task-text:0.1.0' //No subir de version
 
+    // Dependencias del modelo de caption
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.google.android.material:material:1.1.0'
+
 }
 

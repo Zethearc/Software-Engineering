@@ -109,6 +109,26 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/button_caption"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#2D4C8A"
+            android:insetLeft="120dp"
+            android:insetTop="10dp"
+            android:insetRight="120dp"
+            android:text="Caption" />
+
+        <Button
+            android:id="@+id/button_sentiment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#2D4C8A"
+            android:insetLeft="120dp"
+            android:insetTop="10dp"
+            android:insetRight="120dp"
+            android:text="Prediction" />
+
+        <Button
             android:id="@+id/logOutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,16 +139,6 @@
             android:gravity="center"
             android:text="@string/cerrar_sesi_n" />
 
-        <Button
-            android:id="@+id/button_sentiment"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:insetLeft="120dp"
-            android:insetTop="10dp"
-            android:insetRight="120dp"
-            android:text="Prediction"
-            android:backgroundTint="#2D4C8A"
-            />
 
     </LinearLayout>
 
