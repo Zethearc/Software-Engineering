@@ -37,9 +37,9 @@ Android Studio configures new projects to deploy to Android Emulator or a connec
 2. In the target device `drop-down menu`, select the device on which you want to run the app. 
 If you do not have any device configured, you must connect a device via USB or create an AVD to use Android Emulator.
 
-![1.2](1.2.png)
-
-3. Click on Run.
+![1.2](https://github.com/Zethearc/Software-Engineering/blob/a3a5a1e7e34e7805a0afce1078863585e57650e5/1.2.png)
+   
+3. Click on **Run**.
 
 ### How to connect to your device via USB
 When everything is ready and the device is connected via USB, click Run in Android Studio to build and run the app on the device.
@@ -96,7 +96,7 @@ Cabezas Dario  dario.cabezas@yachaytech.edu.ec - [LinkedIn](https://www.linkedin
 Camacho Jean   jean.camacho@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/jean-camacho-126126212)  
 De la Cruz Franklin franklin.de@yachaytech.edu.ec - [LinkedIn]   
 Figueroa Saul. saul.figueroa@yachaytech.edu.ec - [LinkedIn]  
-Moncada Claudia. claudia.moncada@yachaytech.edu.ec - [LinkedIn]  
+Moncada Claudia. claudia.moncada@yachaytech.edu.ec - [LinkedIn](https://www.linkedin.com/in/claudia-maria-moncada-da-silva-999a63248/)
 Quelal Andres. andres.quelal@yachaytech.edu.ec - [LinkedIn]    
 Quizhpe Edwin. edwin.quizhpe@yachaytech.edu.ec - [LinkedIn]  
 Zapatier Luis. luis.zapatier@yachaytech.edu.ec - [LinkedIn]  
