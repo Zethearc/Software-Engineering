@@ -37,7 +37,7 @@ Android Studio configures new projects to deploy to Android Emulator or a connec
 2. In the target device `drop-down menu`, select the device on which you want to run the app. 
 If you do not have any device configured, you must connect a device via USB or create an AVD to use Android Emulator.
 
-![1.2](https://github.com/Zethearc/Software-Engineering/blob/a3a5a1e7e34e7805a0afce1078863585e57650e5/1.2.png)
+![1.2](1.2.png)
    
 3. Click on **Run**.
 
@@ -62,20 +62,21 @@ Android Studio will warn you if you try to start the project on a device that ha
 ### Login
 The first step in the App is to get login with your own credentials or by the Google Account. The user can choose one of them and get into the App. 
 
-![1](1.jpg)
-![3](3.png)
+![first](first.jpeg)
+![second](second.jpeg)
+![third](third.jpeg)
 
 ### Select photos from Google Photos
 The second step for the user is to upload their photos from Google Photos. For this the user must select the number of photos of his preference from Google Photos and upload them to the App. Remember to select the most relevant pictures about the user in order to obtain the best final analysis.
 
-![5](5.png)
+![fourth](fourth.jpeg)
+![fifth](fifth.jpeg)
 
 ### Sentiment Analysis
 The third step for the user after registration is to begin sentiment analysis. Then, the sentiment analysis will start with the uploaded data. The final result is the display of a text string of the analysis and graphs corresponding to the result.
 
-![2](2.jpg)
-![4](4.png)
-
+![sixth](sixth.jpeg)
+![seventh](seventh.jpeg)
 
 ## For Developers - Libraries needed to run the application code
 
