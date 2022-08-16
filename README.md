@@ -60,7 +60,7 @@ Android Studio will warn you if you try to start the project on a device that ha
 
 ## Demo of the App (Screenshots)
 ### Login
-The first step in the App is to get login with your own credentials or by the Google Account. The user can choose one of them and get into the App. 
+The first step in the App is to get login with your own credentials or by the Google Account. The user can choose one of them and get into the App. Once logged in, a screen will be displayed giving you permission to start uploading your photos.
 
 ![first](https://github.com/Zethearc/Software-Engineering/blob/1db71dfdba8272244ebf89042f0dca2c20f74a1d/images/first.jpeg)
 
@@ -69,14 +69,14 @@ The first step in the App is to get login with your own credentials or by the Go
 ![third](https://github.com/Zethearc/Software-Engineering/blob/9fdeb8a3d9384ce729b694dd744d5b03db603caf/images/third.jpeg)
 
 ### Select photos from Google Photos
-The second step for the user is to upload their photos from Google Photos. For this the user must select the number of photos of his preference from Google Photos and upload them to the App. Remember to select the most relevant pictures about the user in order to obtain the best final analysis.
+The second step for the user is to upload their photos from Google Photos. For this the user must select the number of photos of his preference from Google Photos and upload them to the App. Remember to select the most relevant pictures about the user in order to obtain the best final analysis. You also have the option to remove photos one by one or click the remove all button.
 
 ![fourth](https://github.com/Zethearc/Software-Engineering/blob/9fdeb8a3d9384ce729b694dd744d5b03db603caf/images/fourth.jpeg)
 
 ![fifth](https://github.com/Zethearc/Software-Engineering/blob/9fdeb8a3d9384ce729b694dd744d5b03db603caf/images/fifth.jpeg)
 
 ### Sentiment Analysis
-The third step for the user after registration is to begin sentiment analysis. Then, the sentiment analysis will start with the uploaded data. The final result is the display of a text string of the analysis and graphs corresponding to the result.
+The third step for the user after registration is to begin sentiment analysis. Then, the sentiment analysis will start with the uploaded data. The final result is the display of a text string of the analysis and graphs corresponding to the result. The first thing that will be displayed is the captioning of the selected photo. After that, the program displays the percentages corresponding to positive, negative or neutral sentiments. The sentiment with the highest percentage corresponds to the final analysis calculated by the App.
 
 ![sixth](https://github.com/Zethearc/Software-Engineering/blob/9fdeb8a3d9384ce729b694dd744d5b03db603caf/images/sixth.jpeg)
 
