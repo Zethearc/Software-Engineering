@@ -74,6 +74,23 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         prefs.putString("Email", email)
         prefs.putString("Provider", provider)
         prefs.apply()
+
+        /**
+        val btn: Button = findViewById(R.id.button_sentiment)
+        btn.setOnClickListener {
+            val intent: Intent = Intent(this, SentimentModel::class.java)
+            startActivity(intent)
+            }
+        **/
+
+        val btn2: Button = findViewById(R.id.button_caption)
+        btn2.setOnClickListener {
+            val intent : Intent = Intent(this, MainActivity::class.java).apply{
+                putExtra("firstImg", list!![0].toString())
+            }
+            list!!.remove(list!![0])
+            startActivity(intent)
+        }
     }
 
     private fun setup(email: String, provider: String) {
@@ -146,4 +163,19 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener,
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
+
+
+    //Plotear la parte del sentiment analysis
+    //override fun onCreate(savedInstanceState: Bundle?) {
+        //super.onCreate(savedInstanceState)
+        //setContentView(R.layout.sentiment_model)
+
+        //val btn: Button = findViewById(R.id.button_sentiment)
+        //btn.setOnClickListener {
+            //val intent: Intent = Intent(this, SentimentModel::class.java)
+            //startActivity(intent)
+        //}
+    //}
+
+
 }
