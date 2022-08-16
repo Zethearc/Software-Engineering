@@ -62,20 +62,24 @@ Android Studio will warn you if you try to start the project on a device that ha
 ### Login
 The first step in the App is to get login with your own credentials or by the Google Account. The user can choose one of them and get into the App. 
 
-![first](first.jpeg)
+![first]([first.jpeg](https://github.com/Zethearc/Software-Engineering/blob/1db71dfdba8272244ebf89042f0dca2c20f74a1d/images/first.jpeg))
+
 ![second](second.jpeg)
+
 ![third](third.jpeg)
 
 ### Select photos from Google Photos
 The second step for the user is to upload their photos from Google Photos. For this the user must select the number of photos of his preference from Google Photos and upload them to the App. Remember to select the most relevant pictures about the user in order to obtain the best final analysis.
 
 ![fourth](fourth.jpeg)
+
 ![fifth](fifth.jpeg)
 
 ### Sentiment Analysis
 The third step for the user after registration is to begin sentiment analysis. Then, the sentiment analysis will start with the uploaded data. The final result is the display of a text string of the analysis and graphs corresponding to the result.
 
 ![sixth](sixth.jpeg)
+
 ![seventh](seventh.jpeg)
 
 ## For Developers - Libraries needed to run the application code
