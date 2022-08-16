@@ -50,11 +50,12 @@ Android Studio will warn you if you try to start the project on a device that ha
 
 ## User Guide for the Captioning Model 
 1. Unzip the file `“captionmodel.rar”`.
-2. Using the console access the caption model folder.
-3. Execute the command `"pip install requirements.txt"`.
-4. Once all the requirements are installed, run the server with the command `"python app.py"`.
-5. Wait for it to run. There will be IP addresses of the server, copy that one (any of those 2) in the app that has as name `"MyAPI"` where it says base URL.
-6. Compile and install the application again, and the caption model should work.
+2. Using the console access the captionmodel folder, then to the imagecaption folder.
+3. Execute the command `"pip install -r requirements.txt"`.
+4. Once all the requirements are installed, run the caption model with the command `"python caption2.py"` (for the first time, this could take a minute).
+5. Once the capton model was executed with no errors, run the server with the command `"app.py"`
+6. Wait for it to run. There will be IP addresses of the server, copy that one (any of those 2) in the app module that has as name `"MyAPI"` where it says base URL.
+7. Compile and install the application, and the caption model should work.
 
 
 ## Demo of the App (Screenshots)
