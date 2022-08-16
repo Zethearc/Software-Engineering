@@ -45,13 +45,7 @@ android {
     //}
 }
 
-allprojects {
-    repositories {
-        maven { url "https://jitpack.io" }
-        }
-    }
 dependencies {
-    implementation "com.github.PhilJay:MPAndroidChart:v3.1.0"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.firebase:firebase-analytics:21.1.0'
     implementation 'com.google.android.gms:play-services-auth:20.2.0'
@@ -74,6 +68,12 @@ dependencies {
 
     // TODO 4: Add TFLite Task API (Text) dependency
     implementation 'org.tensorflow:tensorflow-lite-task-text:0.1.0' //No subir de version
+
+    // Dependencias del modelo de caption
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.google.android.material:material:1.1.0'
 
 }
 
