@@ -11,18 +11,22 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions
 import com.google.firebase.ml.common.modeldownload.FirebaseModelManager
 import com.google.firebase.ml.custom.FirebaseCustomRemoteModel
+import kotlinx.android.synthetic.main.sentiment_model.*
 import org.tensorflow.lite.task.text.nlclassifier.BertNLClassifier
 import java.io.File
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 
+
+
 class SentimentModel : AppCompatActivity() {
     private lateinit var resultTextView: TextView
+    // private lateinit var inputEditText: EditText
+    private lateinit var inputEditText: TextView
     private lateinit var executorService: ExecutorService
     private lateinit var scrollView: ScrollView
     private lateinit var predictButton: Button
-
 
     // TODO 5: Define a NLClassifier variable
     private lateinit var textClassifier: BertNLClassifier
@@ -32,16 +36,17 @@ class SentimentModel : AppCompatActivity() {
         Log.v(TAG, "onCreate")
         executorService = Executors.newSingleThreadExecutor()
         resultTextView = findViewById(R.id.result_text_view)
+        // inputEditText = findViewById(R.id.input_text)
+        inputEditText= findViewById(R.id.view_text)
         scrollView = findViewById(R.id.scroll_view)
-        downloadModel("MobileBERT")
-
-        predictButton = findViewById(R.id.button_upload)
-
+        predictButton = findViewById(R.id.predict_button)
+        view_text.setText(caption_result)
 
         predictButton.setOnClickListener(
-            { v: View -> classify(caption_result) })
+            View.OnClickListener { v: View -> classify(inputEditText.getText().toString()) })
 
-        // TODO 3: Call the method to download TFLite mode
+        // TODO 3: Call the method to download TFLite model
+        downloadModel("MobileBERT")
     }
 
     /** Send input text to TextClassificationClient and get the classify messages.  */
@@ -55,6 +60,7 @@ class SentimentModel : AppCompatActivity() {
             //val names = arrayOf("Hello world","I hate you","I love you","You look awesome","You are beautiful")
 
             // TODO 8: Convert the result to a human-readable text
+            var textToShow = "Input: $text\nOutput:\n"
             var max_value  = arrayOfNulls<Float>(3)
             var max_label = arrayOfNulls<String>(3)
             for (i in results.indices) {
@@ -73,6 +79,7 @@ class SentimentModel : AppCompatActivity() {
                 }
 
             }
+            var textToShow2 = String.format("    %s: %s\n", "Score Result", largest)
 
             // Encontrar el label del score mayor
 
@@ -82,6 +89,25 @@ class SentimentModel : AppCompatActivity() {
                     label_predict = max_label[i].toString()
                 }
             }
+
+            var textToShow3 = String.format("    %s: %s\n", "Label Result", label_predict)
+
+            // Almacenar los resultados en un arreglo principal
+
+            var main_result = mutableListOf<Any>()
+            if (largest != null) {
+                main_result.add(largest)
+            }
+            main_result.add(label_predict)
+
+            var textToShow5= "--------------------\n"
+
+            // Show classification result on screen
+            showResult(textToShow)
+            showResult(textToShow2)
+            showResult(textToShow3)
+            showResult(textToShow5)
+            //showResult(texts.toString())
 
             // TODO: Jean -> Create if cycle that picks which .xml face display on screen and below the percentage
             val faceDisplay = findViewById<ImageView>(R.id.face_display)
@@ -94,9 +120,6 @@ class SentimentModel : AppCompatActivity() {
             }else if (label_predict == results[0].label){
                 faceDisplay.setImageResource(R.drawable.ic_happy_face)
             }
-            val textToShow = String.format("Your image is predominant: %s\n (%s)", label_predict, percentage)
-            showResult(textToShow)
-
         }
     }
 
@@ -108,6 +131,8 @@ class SentimentModel : AppCompatActivity() {
             // Append the result to the UI.
             resultTextView.append(textToShow)
 
+            // Clear the input text.
+            // inputEditText.text.clear()
 
             // Scroll to the bottom to show latest entry's classification result.
             scrollView.post { scrollView.fullScroll(View.FOCUS_DOWN) }
@@ -116,7 +141,7 @@ class SentimentModel : AppCompatActivity() {
     // TODO 2: Implement a method to download TFLite model from Firebase
     /** Download model from Firebase ML.  */
     @Synchronized
-    fun downloadModel(modelName: String) {
+    private fun downloadModel(modelName: String) {
         val remoteModel = FirebaseCustomRemoteModel.Builder(modelName)
             .build()
         val conditions = FirebaseModelDownloadConditions.Builder()
