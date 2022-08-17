@@ -36,6 +36,20 @@
         app:layout_constraintEnd_toStartOf="@+id/predict_button"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/face_display"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_view"
+        app:layout_constraintVertical_bias="0.369"
+        app:srcCompat="@android:drawable/screen_background_light_transparent" />
+
     <Button
         android:id="@+id/predict_button"
         android:layout_width="wrap_content"

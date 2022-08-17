@@ -1,24 +1,19 @@
 package com.example.photos_app
 
 import android.content.ContentValues.TAG
-
-import androidx.appcompat.app.AppCompatActivity
-import org.tensorflow.lite.task.text.nlclassifier.BertNLClassifier
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Continuation
-import com.google.firebase.ml.custom.FirebaseCustomRemoteModel
+import com.google.android.gms.tasks.Task
 import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions
 import com.google.firebase.ml.common.modeldownload.FirebaseModelManager
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.Task
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.results.*
+import com.google.firebase.ml.custom.FirebaseCustomRemoteModel
 import kotlinx.android.synthetic.main.sentiment_model.*
+import org.tensorflow.lite.task.text.nlclassifier.BertNLClassifier
 import java.io.File
-import java.lang.Exception
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -104,7 +99,6 @@ class SentimentModel : AppCompatActivity() {
                 main_result.add(largest)
             }
             main_result.add(label_predict)
-            var textToShow4 = String.format("    %s: %s\n", "Array", main_result)
 
             var textToShow5= "--------------------\n"
 
@@ -112,9 +106,19 @@ class SentimentModel : AppCompatActivity() {
             showResult(textToShow)
             showResult(textToShow2)
             showResult(textToShow3)
-            showResult(textToShow4)
             showResult(textToShow5)
             //showResult(texts.toString())
+
+            // TODO: Jean -> Create if cycle that picks which .xml face display on screen and below the percentage
+            val faceDisplay: ImageView = findViewById(R.id.face_display)
+            if (label_predict == results[0].label){
+                faceDisplay.setImageResource(R.drawable.ic_sad_face)
+            }
+            else if (label_predict == results[1].label){
+                faceDisplay.setImageResource(R.drawable.ic_neutral_face)
+            }else if (label_predict == results[0].label){
+                faceDisplay.setImageResource(R.drawable.ic_happy_face)
+            }
         }
     }
 
