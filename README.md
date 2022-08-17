@@ -48,7 +48,7 @@ You can also use adb to execute commands as follows:
 - Run any adb command with the `-d` flag to target the device.
 Android Studio will warn you if you try to start the project on a device that has an associated error or warning. Iconography and stylistic changes differentiate between errors (device selections that result in a corrupted configuration) and warnings (device selections that may result in unexpected behavior, but can still be executed).
 
-## User Guide for the Captioning Model 
+## User Guide for the Captioning Model (Dowload the file: https://drive.google.com/file/d/1jhwxlaBW_Vu1E4Otat5P3_acsqTBzXc6/view?usp=sharing)
 1. Unzip the file `“captionmodel.rar”`.
 2. Using the console access the captionmodel folder, then to the imagecaption folder.
 3. Execute the command `"pip install -r requirements.txt"`.
